@@ -4,198 +4,154 @@
 <title>Gelatinose — Neo-Cosmos Collection</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Creepster&amp;display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <style>
-  body { margin:0; background:#161616; color:#ffffff; font-family:Helvetica, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  html, body { margin:0; padding:0; background:#0b0b0b; color:#ffffff; font-family:Helvetica, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing:antialiased; }
   a { color:#ffffff; text-decoration:none; }
   a:hover { color:#48e3a4; }
   [data-reveal] { opacity:0.001; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
   [data-reveal].is-in { opacity:1; transform:none; }
 </style>
-</helmet>
+</head>
+<body>
 
-<template id="__bundler_thumbnail">
-  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#0b0b0b"/><text x="50" y="58" text-anchor="middle" font-family="Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#48e3a4">GL</text></svg>
-</template>
+<div style="max-width:1280px;margin:0 auto">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 34px">
+    <div style="font-family: Creepster, Helvetica, sans-serif; font-size: 30px; letter-spacing: .06em; color: #ffffff">GELATINOSE</div>
+    <div style="display:flex;gap:40px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">
+      <a href="#top">Narrative</a>
+      <a href="#top">About</a>
+      <a href="#top">Stills</a>
+    </div>
+  </div>
 
-<section style="background:#0b0b0b;overflow:hidden">
-      <div style="max-width:1280px;margin:0 auto">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 34px">
-          <div style="font-family: Creepster, Helvetica, sans-serif; font-size: 30px; letter-spacing: .06em; color: #ffffff">GELATINOSE</div>
-          <div style="display:flex;gap:40px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">
-            <a href="#top">Narrative</a>
-            <a href="#top">About</a>
-            <a href="#top">Stills</a>
-          </div>
+  <div data-reveal style="position:relative;height:640px;background:#000">
+    <video src="uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(11,11,11,.55) 0%, rgba(11,11,11,0) 30%, rgba(11,11,11,.85) 100%)"></div>
+    <div style="position:absolute;left:0;right:0;bottom:56px;text-align:center;pointer-events:none;font-size:15px;color:#ffffff;letter-spacing:.02em">It doesn't hold its shape.</div>
+  </div>
+
+  <div data-reveal style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:70px 34px 90px">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">This is soft matter. — Gelatinose</div>
+      <div style="font-size:12px;line-height:1.9;color:#ffffff">A short film about a body that will not stay solid. Shot over four nights in a wet-plastic set, on 16mm and digital.</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#ffffff">
+        <span>2026 · Short film · 11 min</span>
+        <span>Neo-Cosmos</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:34px">
+      <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Credits</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:34px 60px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:2.1">
+        <div style="color:#ffffff">
+          <div>Written &amp; directed by</div>
+          <div>Director of photography</div>
+          <div>Executive producer</div>
+          <div>Starring</div>
         </div>
-
-        <div data-reveal="" style="position:relative;height:640px;background:#000">
-          <image-slot id="a-hero" shape="rect" fit="cover" src="uploads/photos-1785520696685.png" placeholder="Drop the hero frame"></image-slot>
-          <video data-hero-video="1" src="uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
-          <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(11,11,11,.55) 0%, rgba(11,11,11,0) 30%, rgba(11,11,11,.85) 100%)"></div>
-          <div style="position:absolute;left:0;right:0;bottom:56px;text-align:center;pointer-events:none;font-size:15px;color:#ffffff;letter-spacing:.02em">It doesn't hold its shape.</div>
+        <div style="color:#ffffff">
+          <div>Mira Halloran</div>
+          <div>Jonas Ek</div>
+          <div>Nadia Sperling</div>
+          <div>Teo Vance, Ilse Bergman</div>
         </div>
-
-        <div data-reveal="" style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:70px 34px 90px">
-          <div style="display:flex;flex-direction:column;gap:22px">
-            <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">This is soft matter. — Gelatinose</div>
-            <div style="font-size:12px;line-height:1.9;color:#ffffff">A short film about a body that will not stay solid. Shot over four nights in a wet-plastic set, on 16mm and digital.</div>
-            <div style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#ffffff">
-              <span>2026 · Short film · 11 min</span>
-              <span>Neo-Cosmos</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:34px">
-            <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Credits</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:34px 60px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:2.1">
-              <div style="color:#ffffff">
-                <div>Written &amp; directed by</div>
-                <div>Director of photography</div>
-                <div>Executive producer</div>
-                <div>Starring</div>
-              </div>
-              <div style="color:#ffffff">
-                <div>Mira Halloran</div>
-                <div>Jonas Ek</div>
-                <div>Nadia Sperling</div>
-                <div>Teo Vance, Ilse Bergman</div>
-              </div>
-              <div style="color:#ffffff">
-                <div>Production design</div>
-                <div>Practical effects</div>
-                <div>Costume</div>
-                <div>Camera</div>
-                <div>Gaffer</div>
-              </div>
-              <div style="color:#ffffff">
-                <div>Lova Rehn</div>
-                <div>Studio Wetform</div>
-                <div>Anouk Meijer</div>
-                <div>Karim Osei</div>
-                <div>Piet Rask</div>
-              </div>
-              <div style="color:#ffffff">
-                <div>Edit</div>
-                <div>Color</div>
-                <div>Sound</div>
-                <div>Score</div>
-              </div>
-              <div style="color:#ffffff">
-                <div>Mira Halloran</div>
-                <div>Hanne Dietz</div>
-                <div>Field Room</div>
-                <div>Sable Nine</div>
-              </div>
-            </div>
-          </div>
+        <div style="color:#ffffff">
+          <div>Production design</div>
+          <div>Practical effects</div>
+          <div>Costume</div>
+          <div>Camera</div>
+          <div>Gaffer</div>
         </div>
-
-        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:0 34px">
-          <div data-reveal="" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-            <img src="uploads/1.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
-            <img src="uploads/bag-creature.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease" style-hover="opacity:0">
-          </div>
-          <div data-reveal="" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-            <img src="uploads/street-creature.png" alt="Street paste-up" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
-            <img src="uploads/2.png" alt="Street paste-up" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease" style-hover="opacity:0">
-          </div>
-          <div data-reveal="" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-            <img src="uploads/3.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
-            <img src="uploads/paper-creature.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease" style-hover="opacity:0">
-          </div>
+        <div style="color:#ffffff">
+          <div>Lova Rehn</div>
+          <div>Studio Wetform</div>
+          <div>Anouk Meijer</div>
+          <div>Karim Osei</div>
+          <div>Piet Rask</div>
         </div>
-
-        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:14px 34px 0">
-          <div data-reveal=""><img src="uploads/poster-tamagotchi.png.png" alt="Tamagotchi poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
-          <div data-reveal=""><img src="uploads/poster-creature.png.png" alt="Creature poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
-          <div data-reveal=""><img src="uploads/poster-keyring.png.png" alt="Keyring poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
+        <div style="color:#ffffff">
+          <div>Edit</div>
+          <div>Color</div>
+          <div>Sound</div>
+          <div>Score</div>
         </div>
-
-        <div data-reveal="" style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:110px 34px 0">
-          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">The premise</div>
-          <div style="display:flex;flex-direction:column;gap:26px;max-width:720px">
-            <div style="font-size:24px;line-height:1.45;color:#ffffff;text-wrap:pretty">2030. Earth fashion becomes a galactic hit — and its biggest buyers are not from Earth.</div>
-            <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Off-world species have developed a taste for terrestrial dress. At the center of the trend are the Gelatinos: a translucent, gel-bodied species whose proportions no Earth pattern was ever cut for.</div>
-            <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Our client is Neo-Cosmos, the distributor serving that market. The project is a cross-species high-fashion collection built for the Gelatinos — posters, product, and print made for a body that will not hold its shape.</div>
-          </div>
-        </div>
-
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:22px;padding:90px 34px 0">
-          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Motion tests</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div style="display:flex;flex-direction:column;gap:12px">
-              <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-                <video data-autovideo="1" src="uploads/video-1.mp4" muted="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
-              </div>
-              <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 01 — Wet loop</div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:12px">
-              <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-                <video data-autovideo="1" src="uploads/hf_20260730_145248_43b95a92-f443-48f7-9efb-40b0b78f2e34.mp4" muted="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
-              </div>
-              <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 02 — Print loop</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:100px 34px 34px">
-          <div style="font-family:Creepster, Helvetica, sans-serif;font-size:22px;letter-spacing:.06em;color:#ffffff">GELATINOSE</div>
-          <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Neo-Cosmos · 2026</div>
+        <div style="color:#ffffff">
+          <div>Mira Halloran</div>
+          <div>Hanne Dietz</div>
+          <div>Field Room</div>
+          <div>Sable Nine</div>
         </div>
       </div>
-</section>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:3400},&quot;heroVideo&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      heroVideo: this.props.heroVideo ?? 'uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4',
-    };
-  }
-  componentDidMount() {
-    const wire = () => {
-      document.querySelectorAll('[data-hero-video], [data-autovideo]').forEach(v => {
-        if (v.__wired) return;
-        v.__wired = true;
-        v.muted = true;
-        v.defaultMuted = true;
-        v.volume = 0;
-        v.loop = true;
-        v.autoplay = true;
-        v.playsInline = true;
-        v.setAttribute('playsinline', '');
-        v.addEventListener('error', () => { v.style.display = 'none'; });
-        v.play?.().catch(() => {});
-      });
-    };
-    wire();
-    setTimeout(wire, 400);
-    setTimeout(wire, 1500);
-    const seen = new WeakSet();
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
-    const scan = () => document.querySelectorAll('[data-reveal]').forEach((el, i) => {
-      if (seen.has(el)) return;
-      seen.add(el);
-      el.style.transitionDelay = ((i % 4) * 70) + 'ms';
-      io.observe(el);
-    });
-    scan();
-    this._mo = new MutationObserver(scan);
-    this._mo.observe(document.body, { childList: true, subtree: true });
-    this._t = setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-in')), 2600);
-  }
-  componentWillUnmount() { clearTimeout(this._t); if (this._mo) this._mo.disconnect(); }
-}
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:0 34px">
+    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+      <img src="uploads/1.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+      <img src="uploads/2.png" alt="Street paste-up" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+      <img src="uploads/3.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:14px 34px 0">
+    <div data-reveal><img src="uploads/poster-tamagotchi.png.png" alt="Tamagotchi poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
+    <div data-reveal><img src="uploads/poster-creature.png.png" alt="Creature poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
+    <div data-reveal><img src="uploads/poster-keyring.png.png" alt="Keyring poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
+  </div>
+
+  <div data-reveal style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:110px 34px 0">
+    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">The premise</div>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:720px">
+      <div style="font-size:24px;line-height:1.45;color:#ffffff;text-wrap:pretty">2030. Earth fashion becomes a galactic hit — and its biggest buyers are not from Earth.</div>
+      <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Off-world species have developed a taste for terrestrial dress. At the center of the trend are the Gelatinos: a translucent, gel-bodied species whose proportions no Earth pattern was ever cut for.</div>
+      <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Our client is Neo-Cosmos, the distributor serving that market. The project is a cross-species high-fashion collection built for the Gelatinos — posters, product, and print made for a body that will not hold its shape.</div>
+    </div>
+  </div>
+
+  <div data-reveal style="display:flex;flex-direction:column;gap:22px;padding:90px 34px 0">
+    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Motion tests</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+          <video src="uploads/video-1.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+        </div>
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 01 — Wet loop</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+          <video src="uploads/hf_20260730_145248_43b95a92-f443-48f7-9efb-40b0b78f2e34.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+        </div>
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 02 — Print loop</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:100px 34px 34px">
+    <div style="font-family:Creepster, Helvetica, sans-serif;font-size:22px;letter-spacing:.06em;color:#ffffff">GELATINOSE</div>
+    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Neo-Cosmos · 2026</div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const seen = new WeakSet();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+  document.querySelectorAll('[data-reveal]').forEach((el, i) => {
+    if (seen.has(el)) return;
+    seen.add(el);
+    el.style.transitionDelay = ((i % 4) * 70) + 'ms';
+    io.observe(el);
+  });
+  setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-in')), 2600);
+});
 </script>
 </body>
 </html>
