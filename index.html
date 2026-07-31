@@ -14,6 +14,9 @@
   a:hover { color:#48e3a4; }
   [data-reveal] { opacity:0.001; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
   [data-reveal].is-in { opacity:1; transform:none; }
+  .still-card img:last-child { opacity:0; }
+  .still-card:hover img:first-child { opacity:0; }
+  .still-card:hover img:last-child { opacity:1; }
 </style>
 </head>
 <body>
@@ -29,10 +32,9 @@
     </nav>
   </header>
 
-  <!-- Hero: Full viewport with hover image cycling -->
-  <section id="hero" data-reveal style="position:relative;width:100vw;height:100vh;background:#000;cursor:pointer">
+  <!-- Hero: Full viewport -->
+  <section id="hero" data-reveal style="position:relative;width:100vw;height:100vh;background:#000">
     <video src="uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
-    <img id="hero-overlay" src="" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:0;transition:opacity .4s ease">
     <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(11,11,11,.6) 0%, rgba(11,11,11,0) 25%, rgba(11,11,11,0) 70%, rgba(11,11,11,.9) 100%)"></div>
     <div style="position:absolute;left:0;right:0;bottom:80px;text-align:center;pointer-events:none;font-size:16px;color:#ffffff;letter-spacing:.03em">It doesn't hold its shape.</div>
   </section>
@@ -90,16 +92,19 @@
     </div>
   </section>
 
-  <!-- Stills Grid: Edge to edge -->
+  <!-- Stills Grid: Edge to edge with hover swap -->
   <section id="stills" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;padding:0">
-    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-      <img src="uploads/1.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <div data-reveal class="still-card" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden;cursor:pointer">
+      <img src="uploads/1.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease">
+      <img src="uploads/bag-creature.png" alt="Bag creature" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .35s ease">
     </div>
-    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-      <img src="uploads/2.png" alt="Street paste-up" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <div data-reveal class="still-card" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden;cursor:pointer">
+      <img src="uploads/2.png" alt="Street paste-up" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease">
+      <img src="uploads/street-creature.png" alt="Street creature" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .35s ease">
     </div>
-    <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
-      <img src="uploads/3.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <div data-reveal class="still-card" style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden;cursor:pointer">
+      <img src="uploads/3.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease">
+      <img src="uploads/paper-creature.png" alt="Paper creature" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .35s ease">
     </div>
   </section>
 
@@ -163,34 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     io.observe(el);
   });
   setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-in')), 2600);
-
-  // Hero hover image cycling
-  const heroImages = [
-    'uploads/Group 1.png',
-    'uploads/Group 2.png',
-    'uploads/Group 3.png',
-    'uploads/bag-creature.png'
-  ];
-  let heroIndex = 0;
-  const heroSection = document.getElementById('hero');
-  const heroOverlay = document.getElementById('hero-overlay');
-  
-  // Preload images
-  heroImages.forEach(src => {
-    const img = new Image();
-    img.src = src;
-    img.onerror = () => console.error('Failed to load:', src);
-  });
-
-  heroSection.addEventListener('mouseenter', function() {
-    heroOverlay.src = heroImages[heroIndex];
-    heroOverlay.style.opacity = '1';
-    heroIndex = (heroIndex + 1) % heroImages.length;
-  });
-
-  heroSection.addEventListener('mouseleave', function() {
-    heroOverlay.style.opacity = '0';
-  });
 });
 </script>
 </body>
