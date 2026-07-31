@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; background:#0b0b0b; color:#ffffff; font-family:Helvetica, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:#0b0b0b; color:#ffffff; font-family:Helvetica, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   a { color:#ffffff; text-decoration:none; }
   a:hover { color:#48e3a4; }
   [data-reveal] { opacity:0.001; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
@@ -17,77 +18,79 @@
 </head>
 <body>
 
-<div style="max-width:1280px;margin:0 auto">
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 34px">
-    <div style="font-family: Creepster, Helvetica, sans-serif; font-size: 30px; letter-spacing: .06em; color: #ffffff">GELATINOSE</div>
-    <div style="display:flex;gap:40px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">
-      <a href="#top">Narrative</a>
-      <a href="#top">About</a>
-      <a href="#top">Stills</a>
-    </div>
-  </div>
+<div style="width:100%;min-height:100vh">
+  <!-- Header -->
+  <header style="position:absolute;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:28px 40px">
+    <div style="font-family: Creepster, Helvetica, sans-serif; font-size: 32px; letter-spacing: .06em; color: #ffffff">GELATINOSE</div>
+    <nav style="display:flex;gap:48px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">
+      <a href="#narrative">Narrative</a>
+      <a href="#about">About</a>
+      <a href="#stills">Stills</a>
+    </nav>
+  </header>
 
-  <div data-reveal style="position:relative;height:640px;background:#000">
+  <!-- Hero: Full viewport -->
+  <section data-reveal style="position:relative;width:100vw;height:100vh;background:#000">
     <video src="uploads/hf_20260730_145413_51d3c993-f92e-4bab-9735-2e5c0bebaf30.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
-    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(11,11,11,.55) 0%, rgba(11,11,11,0) 30%, rgba(11,11,11,.85) 100%)"></div>
-    <div style="position:absolute;left:0;right:0;bottom:56px;text-align:center;pointer-events:none;font-size:15px;color:#ffffff;letter-spacing:.02em">It doesn't hold its shape.</div>
-  </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(11,11,11,.6) 0%, rgba(11,11,11,0) 25%, rgba(11,11,11,0) 70%, rgba(11,11,11,.9) 100%)"></div>
+    <div style="position:absolute;left:0;right:0;bottom:80px;text-align:center;pointer-events:none;font-size:16px;color:#ffffff;letter-spacing:.03em">It doesn't hold its shape.</div>
+  </section>
 
-  <div data-reveal style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:70px 34px 90px">
-    <div style="display:flex;flex-direction:column;gap:22px">
-      <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">This is soft matter. — Gelatinose</div>
-      <div style="font-size:12px;line-height:1.9;color:#ffffff">A short film about a body that will not stay solid. Shot over four nights in a wet-plastic set, on 16mm and digital.</div>
-      <div style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#ffffff">
+  <!-- Info + Credits -->
+  <section id="about" data-reveal style="display:flex;justify-content:space-between;padding:100px 40px 120px;gap:80px">
+    <div style="display:flex;flex-direction:column;gap:24px;max-width:320px">
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">This is soft matter. — Gelatinose</div>
+      <div style="font-size:13px;line-height:1.9;color:rgba(255,255,255,.8)">A short film about a body that will not stay solid. Shot over four nights in a wet-plastic set, on 16mm and digital.</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)">
         <span>2026 · Short film · 11 min</span>
         <span>Neo-Cosmos</span>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:34px">
-      <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Credits</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:34px 60px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:2.1">
-        <div style="color:#ffffff">
-          <div>Written &amp; directed by</div>
-          <div>Director of photography</div>
-          <div>Executive producer</div>
-          <div>Starring</div>
-        </div>
-        <div style="color:#ffffff">
+    <div style="display:flex;flex-direction:column;gap:40px;flex:1;max-width:700px">
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff">Credits</div>
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:40px 60px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;line-height:2.2;color:rgba(255,255,255,.7)">
+        <div>
+          <div style="color:#fff">Written & directed by</div>
           <div>Mira Halloran</div>
+        </div>
+        <div>
+          <div style="color:#fff">Director of photography</div>
           <div>Jonas Ek</div>
+        </div>
+        <div>
+          <div style="color:#fff">Executive producer</div>
           <div>Nadia Sperling</div>
-          <div>Teo Vance, Ilse Bergman</div>
         </div>
-        <div style="color:#ffffff">
-          <div>Production design</div>
-          <div>Practical effects</div>
-          <div>Costume</div>
-          <div>Camera</div>
-          <div>Gaffer</div>
-        </div>
-        <div style="color:#ffffff">
+        <div>
+          <div style="color:#fff">Production design</div>
           <div>Lova Rehn</div>
+        </div>
+        <div>
+          <div style="color:#fff">Practical effects</div>
           <div>Studio Wetform</div>
+        </div>
+        <div>
+          <div style="color:#fff">Costume</div>
           <div>Anouk Meijer</div>
-          <div>Karim Osei</div>
-          <div>Piet Rask</div>
         </div>
-        <div style="color:#ffffff">
-          <div>Edit</div>
-          <div>Color</div>
-          <div>Sound</div>
-          <div>Score</div>
+        <div>
+          <div style="color:#fff">Edit & Color</div>
+          <div>Mira Halloran, Hanne Dietz</div>
         </div>
-        <div style="color:#ffffff">
-          <div>Mira Halloran</div>
-          <div>Hanne Dietz</div>
+        <div>
+          <div style="color:#fff">Sound</div>
           <div>Field Room</div>
+        </div>
+        <div>
+          <div style="color:#fff">Score</div>
           <div>Sable Nine</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:0 34px">
+  <!-- Stills Grid: Edge to edge -->
+  <section id="stills" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;padding:0">
     <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
       <img src="uploads/1.png" alt="Wet plastic set" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
     </div>
@@ -97,45 +100,49 @@
     <div data-reveal style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
       <img src="uploads/3.png" alt="Newspaper spread" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
     </div>
-  </div>
+  </section>
 
-  <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;padding:14px 34px 0">
+  <!-- Posters Grid -->
+  <section style="display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;padding:4px 0 0">
     <div data-reveal><img src="uploads/poster-tamagotchi.png.png" alt="Tamagotchi poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
     <div data-reveal><img src="uploads/poster-creature.png.png" alt="Creature poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
     <div data-reveal><img src="uploads/poster-keyring.png.png" alt="Keyring poster" style="width:100%;aspect-ratio:2 / 3;object-fit:cover;display:block"></div>
-  </div>
+  </section>
 
-  <div data-reveal style="display:grid;grid-template-columns:300px 1fr;gap:60px;padding:110px 34px 0">
-    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">The premise</div>
-    <div style="display:flex;flex-direction:column;gap:26px;max-width:720px">
-      <div style="font-size:24px;line-height:1.45;color:#ffffff;text-wrap:pretty">2030. Earth fashion becomes a galactic hit — and its biggest buyers are not from Earth.</div>
-      <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Off-world species have developed a taste for terrestrial dress. At the center of the trend are the Gelatinos: a translucent, gel-bodied species whose proportions no Earth pattern was ever cut for.</div>
-      <div style="font-size:13px;line-height:2;color:#ffffff;text-wrap:pretty">Our client is Neo-Cosmos, the distributor serving that market. The project is a cross-species high-fashion collection built for the Gelatinos — posters, product, and print made for a body that will not hold its shape.</div>
+  <!-- Premise -->
+  <section id="narrative" data-reveal style="display:flex;justify-content:space-between;align-items:flex-start;padding:140px 40px;gap:100px">
+    <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff;white-space:nowrap">The premise</div>
+    <div style="display:flex;flex-direction:column;gap:32px;max-width:800px">
+      <div style="font-size:28px;line-height:1.4;color:#ffffff;font-weight:300">2030. Earth fashion becomes a galactic hit — and its biggest buyers are not from Earth.</div>
+      <div style="font-size:14px;line-height:2;color:rgba(255,255,255,.75)">Off-world species have developed a taste for terrestrial dress. At the center of the trend are the Gelatinos: a translucent, gel-bodied species whose proportions no Earth pattern was ever cut for.</div>
+      <div style="font-size:14px;line-height:2;color:rgba(255,255,255,.75)">Our client is Neo-Cosmos, the distributor serving that market. The project is a cross-species high-fashion collection built for the Gelatinos — posters, product, and print made for a body that will not hold its shape.</div>
     </div>
-  </div>
+  </section>
 
-  <div data-reveal style="display:flex;flex-direction:column;gap:22px;padding:90px 34px 0">
-    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Motion tests</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+  <!-- Motion Tests: Full width -->
+  <section data-reveal style="padding:0 40px 140px">
+    <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff;margin-bottom:32px">Motion tests</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="position:relative;aspect-ratio:16 / 10;background:#000;overflow:hidden">
           <video src="uploads/video-1.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
         </div>
-        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 01 — Wet loop</div>
+        <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)">Test 01 — Wet loop</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="position:relative;aspect-ratio:4 / 5;background:#000;overflow:hidden">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="position:relative;aspect-ratio:16 / 10;background:#000;overflow:hidden">
           <video src="uploads/hf_20260730_145248_43b95a92-f443-48f7-9efb-40b0b78f2e34.mp4" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
         </div>
-        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Test 02 — Print loop</div>
+        <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)">Test 02 — Print loop</div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:100px 34px 34px">
-    <div style="font-family:Creepster, Helvetica, sans-serif;font-size:22px;letter-spacing:.06em;color:#ffffff">GELATINOSE</div>
-    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff">Neo-Cosmos · 2026</div>
-  </div>
+  <!-- Footer -->
+  <footer style="display:flex;align-items:flex-end;justify-content:space-between;padding:60px 40px 40px;border-top:1px solid rgba(255,255,255,.1)">
+    <div style="font-family:Creepster, Helvetica, sans-serif;font-size:24px;letter-spacing:.06em;color:#ffffff">GELATINOSE</div>
+    <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5)">Neo-Cosmos · 2026</div>
+  </footer>
 </div>
 
 <script>
